@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노블맨(Nobleman) | 프리미엄 두피문신 & 토탈뷰티</title>
+    <meta name="description" content="국제 강사 박지혜 원장의 프리미엄 SMP 두피문신, 눈썹, 입술 시술 및 미용 교육 전문 노블맨">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="container">
+            <div class="logo">NOBLEMAN</div>
+            <ul class="nav-links">
+                <li><a href="#intro">소개</a></li>
+                <li><a href="#profile">원장님</a></li>
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#gallery">시술사례</a></li>
+                <li><a href="#location">오시는길</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="visible">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="sub-title">Daejeon Goejeong-dong Premium SMP</span>
+                <h1>당신의 가치를 높이는<br>단 하나의 선택, <span>노블맨</span></h1>
+                <p>대전 괴정동에서 만나는 국제 마스터 박지혜 원장의<br>가장 자연스럽고 완벽한 변화를 경험하세요.</p>
+                <div class="hero-btns">
+                    <a href="#gallery" class="btn-premium">시술 사례 보기</a>
+                    <a href="https://open.kakao.com/o/sXXXXXXXX" target="_blank" class="btn-premium">상담 예약하기</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Using Slide 2 which is a cleaner profile shot -->
+                <img src="../PPT 이미지 변환/슬라이드2.PNG" alt="노블맨 박지혜 원장">
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Intro -->
+    <section id="intro">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nobleman Philosophy</h2>
+                <span></span>
+            </div>
+            <div class="intro-grid">
+                <div class="glass-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>Natural Design</h3>
+                    <p>개개인의 두상과 모질, 피부톤을 고려한 1:1 맞춤 디자인으로 시술한 티가 나지 않는 자연스러움을 추구합니다.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safety First</h3>
+                    <p>검증된 안전한 색소와 멸균된 일회용 니들만을 사용하며, 철저한 위생 관리를 원칙으로 합니다.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Global Tech</h3>
+                    <p>국제 미용 대회 심사위원이자 국제 강사인 대표원장의 차별화된 기술력으로 최상의 결과를 약속합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Director Profile (Secure) -->
+    <section id="profile">
+        <div class="container">
+            <div id="profile-content" class="secure-content">
+                <div class="lock-screen">
+                    <i class="fas fa-lock"></i>
+                    <p>원장님 상세 약력 및 인증 정보는 보안 관리 대상입니다 (Admin 인증 필요)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Interactive Comparison) -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Real Results</h2>
+                <span></span>
+                <p style="margin-top: 20px; color: var(--text-muted);">좌우로 밀어서 노블맨의 정교한 시술 결과를 직접 확인하세요.</p>
+            </div>
+            
+            <div id="gallery-content" class="secure-content">
+                <div class="lock-screen">
+                    <i class="fas fa-lock"></i>
+                    <p>시술 사례 갤러리는 관리자 인증 시 활성화됩니다</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location">
+        <div class="container">
+            <div class="section-title">
+                <h2>Location</h2>
+                <span></span>
+            </div>
+            <div class="location-content">
+                <div id="map" style="width: 100%; height: 400px; border-radius: 15px; overflow: hidden; border: 1px solid rgba(212, 175, 55, 0.2);">
+                    <iframe 
+                        width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                        src="https://maps.google.com/maps?q=%EB%8C%80%EC%A0%84%EA%B2%BD%EC%97%AD%EC%8B%9C%20%EC%84%9C%EA%B5%AC%20%EA%B4%B4%EC%A0%95%EB%8F%99%2048-47&t=&z=17&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>대전광역시 서구 괴정동 48-47</strong><br><span style="font-size: 0.9rem; color: var(--text-muted); margin-left: 35px;">(도산로341번길 96 롯데드림빌 1층)</span></p>
+                    <p><i class="fas fa-phone"></i> 0507-1455-2879</p>
+                    <p><i class="fas fa-clock"></i> AM 10:00 - PM 08:00 (일요일 정기휴무)</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://map.naver.com/v5/search/%EB%8C%80%EC%A0%84%20%EC%84%9C%EA%B5%AC%20%EA%B4%B4%EC%A0%95%EB%8F%99%2048-47" target="_blank" class="btn-premium" style="width: 100%; text-align: center; margin-bottom: 10px;">네이버 지도로 보기</a>
+                        <a href="https://open.kakao.com/o/sXXXXXXXX" target="_blank" class="btn-premium" style="width: 100%; text-align: center;">카카오톡 예약 상담</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NOBLEMAN. All Rights Reserved.</p>
+            <p>Designed by ChoiGPT Strategy Team | <a href="javascript:void(0)" onclick="openLogin()" style="color: rgba(255,255,255,0.05); text-decoration: none; font-size: 0.7rem;">Admin Access</a></p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h3 style="margin-bottom: 20px;">Admin Authentication</h3>
+            <form id="loginForm">
+                <input type="email" id="adminEmail" placeholder="Admin Email" required style="width: 100%; margin-bottom: 10px;">
+                <input type="password" id="adminPassword" placeholder="Password" required style="width: 100%; margin-bottom: 20px;">
+                <button type="submit" class="btn-premium" style="width: 100%;">Authorize</button>
+            </form>
+            <p id="loginMessage" style="margin-top: 15px; font-size: 0.8rem; color: #ff6b6b;"></p>
+        </div>
+    </div>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
