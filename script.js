@@ -52,6 +52,10 @@ async function fetchPublicData() {
         // 2. Fetch Gallery
         const { data: gallery, error: gError } = await supabaseClient.from('nobleman_gallery').select('*');
         if (gallery) renderGallery(gallery);
+
+        // 3. Fetch Posts
+        const { data: posts, error: bError } = await supabaseClient.from('nobleman_posts').select('*').order('created_at', { ascending: false });
+        if (posts) renderPosts(posts);
         
         // Init animations after data load
         initScrollAnimations();
@@ -101,6 +105,24 @@ function renderGallery(items) {
             `).join('')}
         </div>
     `;
+}
+
+function renderPosts(posts) {
+    const content = document.getElementById('blog-content');
+    content.innerHTML = posts.map(post => `
+        <div class="blog-card">
+            <div class="blog-img">
+                <img src="${post.image_url}" alt="${post.title}">
+            </div>
+            <div class="blog-info">
+                <span class="blog-tag">${post.category}</span>
+                <h3>${post.title}</h3>
+                <p>${post.excerpt}</p>
+                <a href="#" class="btn-read-more">자세히 보기 <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    `).join('');
+    gsap.from('.blog-card', { opacity: 0, y: 30, stagger: 0.2, duration: 1 });
 }
 
 // Comparison Slider Logic
