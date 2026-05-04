@@ -421,13 +421,33 @@ footer {
 }
 
 .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin: 50px auto;
     width: 90%;
-    max-width: 400px;
-    padding: 40px;
+    max-width: 850px;
+    padding: 60px 40px;
+    background: rgba(10, 25, 47, 0.95);
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    z-index: 2001;
+}
+
+/* Custom Scrollbar for Modal */
+#postModal {
+    overflow-y: auto;
+}
+
+#postModal::-webkit-scrollbar {
+    width: 6px;
+}
+
+#postModal::-webkit-scrollbar-track {
+    background: rgba(2, 12, 27, 1);
+}
+
+#postModal::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 10px;
 }
 
 .close {
