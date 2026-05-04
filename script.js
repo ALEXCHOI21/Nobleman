@@ -91,7 +91,7 @@ function renderProfile(profile) {
     container.innerHTML = `
         <div class="container profile-flex">
             <div class="profile-image">
-                <img src="../PPT 이미지 변환/슬라이드3.PNG" alt="박지혜 원장">
+                <img src="assets/슬라이드3.PNG" alt="박지혜 원장">
                 <div class="cert-badge">International Master</div>
             </div>
             <div class="profile-text">
