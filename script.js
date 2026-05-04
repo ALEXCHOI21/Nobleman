@@ -118,11 +118,38 @@ function renderPosts(posts) {
                 <span class="blog-tag">${post.category}</span>
                 <h3>${post.title}</h3>
                 <p>${post.excerpt}</p>
-                <a href="#" class="btn-read-more">자세히 보기 <i class="fas fa-arrow-right"></i></a>
+                <a href="javascript:void(0)" class="btn-read-more" onclick='openPost(${JSON.stringify(post).replace(/'/g, "&apos;")})'>자세히 보기 <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     `).join('');
     gsap.from('.blog-card', { opacity: 0, y: 30, stagger: 0.2, duration: 1 });
+}
+
+function openPost(post) {
+    const modal = document.getElementById('postModal');
+    const content = document.getElementById('postDetailContent');
+    
+    content.innerHTML = `
+        <span class="blog-tag">${post.category}</span>
+        <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--secondary-color);">${post.title}</h2>
+        <div style="width: 100%; height: 300px; border-radius: 15px; overflow: hidden; margin-bottom: 30px;">
+            <img src="${post.image_url}" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="post-body" style="line-height: 1.8; color: #ccc; font-size: 1.1rem; white-space: pre-wrap;">
+            ${post.content}
+        </div>
+        <div style="margin-top: 40px; border-top: 1px solid rgba(212,175,55,0.1); padding-top: 20px;">
+            <a href="https://open.kakao.com/o/sXXXXXXXX" target="_blank" class="btn-premium">원장님께 바로 문의하기</a>
+        </div>
+    `;
+    
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+}
+
+function closePost() {
+    document.getElementById('postModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
 }
 
 // Comparison Slider Logic
